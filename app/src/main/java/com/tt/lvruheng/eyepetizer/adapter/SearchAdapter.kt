@@ -7,8 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import com.tt.lvruheng.eyepetizer.R
 import com.google.android.flexbox.FlexboxLayoutManager
+import com.tt.lvruheng.eyepetizer.R
 import com.tt.lvruheng.eyepetizer.ui.ResultActivity
 
 
@@ -52,7 +52,7 @@ class SearchAdapter(context: Context, list: ArrayList<String>) : RecyclerView.Ad
 
 
     class SearchViewHolder(itemView: View?, context: Context) : RecyclerView.ViewHolder(itemView) {
-        var tv_title: TextView = itemView?.findViewById(R.id.tv_title) as TextView
+        var tv_title: TextView = itemView?.findViewById<TextView>(R.id.tv_title) as TextView
         
     }
     interface onDialogDismiss{

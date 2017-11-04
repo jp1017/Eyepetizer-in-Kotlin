@@ -59,8 +59,8 @@ class FindAdapter(context: Context,list: MutableList<FindBean>?) : BaseAdapter()
         var iv_photo : ImageView? = null
         var tv_title : TextView? = null
         init {
-           tv_title = itemView.findViewById(R.id.tv_title) as TextView?
-           iv_photo = itemView.findViewById(R.id.iv_photo) as ImageView?
+           tv_title = itemView.findViewById<TextView>(R.id.tv_title)
+           iv_photo = itemView.findViewById<ImageView>(R.id.iv_photo)
 
         }
 

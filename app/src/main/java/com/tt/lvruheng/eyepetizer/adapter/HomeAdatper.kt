@@ -109,10 +109,10 @@ class HomeAdatper(context: Context,list: MutableList<HomeBean.IssueListBean.Item
         var iv_photo : ImageView ? = null
         var iv_user : ImageView ? = null
         init {
-            tv_detail = itemView?.findViewById(R.id.tv_detail) as TextView?
-            tv_title = itemView?.findViewById(R.id.tv_title) as TextView?
-            iv_photo = itemView?.findViewById(R.id.iv_photo) as ImageView?
-            iv_user =  itemView?.findViewById(R.id.iv_user) as ImageView?
+            tv_detail = itemView?.findViewById<TextView>(R.id.tv_detail)
+            tv_title = itemView?.findViewById<TextView>(R.id.tv_title)
+            iv_photo = itemView?.findViewById<ImageView>(R.id.iv_photo)
+            iv_user =  itemView?.findViewById<ImageView>(R.id.iv_user)
             tv_title?.typeface = Typeface.createFromAsset(context?.assets, "fonts/FZLanTingHeiS-DB1-GB-Regular.TTF")
 
         }

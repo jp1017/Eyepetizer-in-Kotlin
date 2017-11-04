@@ -51,7 +51,7 @@ class FeedAdapter(context: Context, list: ArrayList<HotBean.ItemListBean.DataBea
         var minute =duration?.div(60)
         var second = duration?.minus((minute?.times(60)) as Long )
         var releaseTime = list?.get(position)?.releaseTime
-        var smf : SimpleDateFormat = SimpleDateFormat("MM-dd")
+        var smf = SimpleDateFormat("MM-dd")
         var date = smf.format(releaseTime)
         var realMinute : String
         var realSecond : String
@@ -61,7 +61,7 @@ class FeedAdapter(context: Context, list: ArrayList<HotBean.ItemListBean.DataBea
             realMinute = minute.toString()
         }
         if(second!!<10){
-            realSecond = "0"+second
+            realSecond = "0" + second
         }else{
             realSecond = second.toString()
         }
@@ -90,17 +90,17 @@ class FeedAdapter(context: Context, list: ArrayList<HotBean.ItemListBean.DataBea
                 ObjectSaveUtils.saveObject(context!!,"bean$count",videoBean)
             }
             intent.putExtra("data",videoBean as Parcelable)
-            context?.let { context -> context.startActivity(intent) }
+            context?.startActivity(intent)
         }
     }
 
 
     class FeedViewHolder(itemView: View?, context: Context) : RecyclerView.ViewHolder(itemView) {
-        var iv_photo: ImageView = itemView?.findViewById(R.id.iv_photo) as ImageView
-        var tv_title: TextView = itemView?.findViewById(R.id.tv_title) as TextView
-        var tv_time: TextView = itemView?.findViewById(R.id.tv_detail) as TextView
+        var iv_photo: ImageView = itemView?.findViewById<ImageView>(R.id.iv_photo) as ImageView
+        var tv_title: TextView = itemView?.findViewById<TextView>(R.id.tv_title) as TextView
+        var tv_time: TextView = itemView?.findViewById<TextView>(R.id.tv_detail) as TextView
         init {
-            tv_title?.typeface = Typeface.createFromAsset(context?.assets, "fonts/FZLanTingHeiS-L-GB-Regular.TTF")
+            tv_title.typeface = Typeface.createFromAsset(context?.assets, "fonts/FZLanTingHeiS-L-GB-Regular.TTF")
 
         }
     }

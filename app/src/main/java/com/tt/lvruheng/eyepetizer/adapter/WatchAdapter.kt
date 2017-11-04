@@ -96,9 +96,9 @@ class WatchAdapter(context: Context, list: ArrayList<VideoBean>) : RecyclerView.
 
 
     class WatchViewHolder(itemView: View?, context: Context) : RecyclerView.ViewHolder(itemView) {
-        var iv_photo: ImageView = itemView?.findViewById(R.id.iv_photo) as ImageView
-        var tv_title: TextView = itemView?.findViewById(R.id.tv_title) as TextView
-        var tv_time: TextView = itemView?.findViewById(R.id.tv_detail) as TextView
+        var iv_photo: ImageView = itemView?.findViewById<ImageView>(R.id.iv_photo) as ImageView
+        var tv_title: TextView = itemView?.findViewById<TextView>(R.id.tv_title) as TextView
+        var tv_time: TextView = itemView?.findViewById<TextView>(R.id.tv_detail) as TextView
         init {
             tv_title?.typeface = Typeface.createFromAsset(context?.assets, "fonts/FZLanTingHeiS-L-GB-Regular.TTF")
 

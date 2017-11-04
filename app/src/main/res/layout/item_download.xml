@@ -17,7 +17,7 @@
         android:layout_height="match_parent">
         <LinearLayout
             android:gravity="center"
-            android:layout_toLeftOf="@id/iv_download_state"
+            android:layout_toLeftOf="@+id/iv_download_state"
             android:layout_alignParentLeft="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
